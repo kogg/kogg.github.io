@@ -301,6 +301,13 @@ ul {
 	font-size: 15px;
 	display: block;
 }
+.about-people a {
+	text-decoration: none;
+	color: rgba(0,0,0,.44)
+}
+.about-people a:hover {
+	text-decoration: underline;
+}
 .about-people:first-of-type {
 	margin-top: 8px;
 }
