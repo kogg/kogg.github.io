@@ -30,8 +30,8 @@
   font-weight: 400;
   font-style: normal;
   font-stretch: normal;
-  src: url("/AtlasGrotesk-Regular-Web.eot");
-  src: url("/AtlasGrotesk-Regular-Web.eot?#iefix") format("embedded-opentype"), url("/fonts/AtlasGrotesk-Regular-Web.woff") format("woff"), url("/fonts/AtlasGrotesk-Regular-Web.ttf") format("truetype");
+  src: url("/fonts/AtlasGrotesk-Regular-Web.eot");
+  src: url("/fonts/AtlasGrotesk-Regular-Web.eot?#iefix") format("embedded-opentype"), url("/fonts/AtlasGrotesk-Regular-Web.woff") format("woff"), url("/fonts/AtlasGrotesk-Regular-Web.ttf") format("truetype");
 }
 
 *,
