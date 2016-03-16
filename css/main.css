@@ -36,9 +36,7 @@
 	font-style:normal;
 	font-stretch:normal;
 	src:url("../AtlasGrotesk-Regular-Web.eot");
-	src:url("../AtlasGrotesk-Regular-Web.eot?#iefix") format("embedded-opentype"),
-			url("../AtlasGrotesk-Regular-Web.woff") format("woff"),
-			url("../AtlasGrotesk-Regular-Web.ttf") format("truetype")
+	src:url("../AtlasGrotesk-Regular-Web.eot?#iefix") format("embedded-opentype")
 }
 
 
