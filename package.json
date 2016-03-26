@@ -2,6 +2,8 @@
   "name": "kogg.github.io",
   "version": "1.0.0",
   "scripts": {
+    "clean": "rm -rf dist/*",
+    "copy": "cp -r www/* dist/"
   },
   "repository": {
     "type": "git",
