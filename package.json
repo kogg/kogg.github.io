@@ -4,9 +4,8 @@
   "scripts": {
     "clean": "rm -rf dist/*",
     "copy": "cp -r www/* dist/",
-    "git:add": "git add dist",
-    "pull": "git subtree pull --prefix=dist origin master",
-    "push": "git subtree push --prefix=dist origin master"
+    "deploy": "git subtree push --prefix=dist origin master",
+    "git:add": "git add dist"
   },
   "repository": {
     "type": "git",
