@@ -3,7 +3,7 @@ module.exports = {
 		'postcss-nested',
 		'autoprefixer',
 		'postcss-mq-keyframes',
-		//'cssnano',
+		'cssnano',
 		'postcss-reporter'
 	],
 	'cssnano':          { autoprefixer: false },
