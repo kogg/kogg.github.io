@@ -39,6 +39,11 @@
     "sorcery",
     "git:add"
   ],
+  "browserify": {
+    "transform": [
+      "uglifyify"
+    ]
+  },
   "devDependencies": {
     "cssfmt": "^2.1.5",
     "pre-commit": "^1.1.2"
