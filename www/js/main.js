@@ -1,3 +1,4 @@
+var $ = window.jQuery = require('jquery');
 // $(function () {
 // 	$('.bg-hover').hover(function () {
 // 		var bg = $(this).attr('bg-hover');
