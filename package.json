@@ -4,6 +4,7 @@
   "scripts": {
     "clean": "rm -rf dist/*",
     "copy": "cp -r www/* dist/",
+    "git:add": "git add dist",
     "pull": "git subtree pull --prefix=dist origin master",
     "push": "git subtree push --prefix=dist origin master"
   },
@@ -20,5 +21,13 @@
   "bugs": {
     "url": "https://github.com/kogg/kogg.github.io/issues"
   },
-  "homepage": "https://github.com/kogg/kogg.github.io#readme"
+  "homepage": "https://github.com/kogg/kogg.github.io#readme",
+  "pre-commit": [
+    "clean",
+    "copy",
+    "git:add"
+  ],
+  "devDependencies": {
+    "pre-commit": "^1.1.2"
+  }
 }
