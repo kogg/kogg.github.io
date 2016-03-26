@@ -5,8 +5,9 @@
     "deploy": "git subtree push --prefix=dist origin master",
     "clean": "rm -rf dist/*",
     "copy": "cp -r www/* dist/",
-    "cssfmt:fix": "cssfmt www/css/main.css && git add www/css/main.css",
-    "git:add": "git add dist"
+    "cssfmt": "cssfmt www/css/main.css && git add www/css/main.css",
+    "git:add": "git add dist",
+    "postcss": "mkdir -p dist/css && postcss -c postcss.js -o dist/css/main.css www/css/main.css"
   },
   "repository": {
     "type": "git",
@@ -23,13 +24,22 @@
   },
   "homepage": "https://github.com/kogg/kogg.github.io#readme",
   "pre-commit": [
-    "cssfmt:fix",
+    "cssfmt",
     "clean",
     "copy",
+    "postcss",
     "git:add"
   ],
   "devDependencies": {
     "cssfmt": "^2.1.5",
     "pre-commit": "^1.1.2"
+  },
+  "dependencies": {
+    "autoprefixer": "^6.2.2",
+    "cssnano": "^3.4.0",
+    "postcss-cli": "^2.5.1",
+    "postcss-mq-keyframes": "^0.2.5",
+    "postcss-nested": "^1.0.0",
+    "postcss-reporter": "^1.3.0"
   }
 }
