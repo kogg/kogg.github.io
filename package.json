@@ -2,9 +2,10 @@
   "name": "kogg.github.io",
   "version": "1.0.0",
   "scripts": {
+    "deploy": "git subtree push --prefix=dist origin master",
     "clean": "rm -rf dist/*",
     "copy": "cp -r www/* dist/",
-    "deploy": "git subtree push --prefix=dist origin master",
+    "cssfmt:fix": "cssfmt www/css/main.css && git add www/css/main.css",
     "git:add": "git add dist"
   },
   "repository": {
@@ -22,11 +23,13 @@
   },
   "homepage": "https://github.com/kogg/kogg.github.io#readme",
   "pre-commit": [
+    "cssfmt:fix",
     "clean",
     "copy",
     "git:add"
   ],
   "devDependencies": {
+    "cssfmt": "^2.1.5",
     "pre-commit": "^1.1.2"
   }
 }
