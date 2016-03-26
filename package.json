@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "scripts": {
     "clean": "rm -rf dist/*",
-    "copy": "cp -r www/* dist/"
+    "copy": "cp -r www/* dist/",
+    "pull": "git subtree pull --prefix=dist origin master",
+    "push": "git subtree push --prefix=dist origin master"
   },
   "repository": {
     "type": "git",
