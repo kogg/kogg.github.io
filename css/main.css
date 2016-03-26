@@ -47,7 +47,9 @@
 
 html {
   font-family: "AtlasGroteskRegular", "AtlasGrotesk-Regular", "Helvetica Neue", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
-  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+          text-size-adjust: 100%;
 }
 
 body {
@@ -76,22 +78,26 @@ body {
 .flex-center {
   -webkit-align-items: center;
   -ms-flex-align: center;
-  align-items: center;
+  -webkit-box-align: center;
+              -ms-grid-row-align: center;
+          align-items: center;
 }
 
 .flex {
   display: -webkit-box;
-  display: -moz-box;
   display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
 }
 
 .flex-end {
   display: -webkit-box;
-  display: -moz-box;
   display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -webkit-justify-content: flex-end;
   -moz-justify-content: flex-end;
   -ms-justify-content: flex-end;
@@ -99,10 +105,12 @@ body {
 
 .flex-spread {
   display: -webkit-box;
-  display: -moz-box;
   display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-justify-content: space-between;
   -moz-justify-content: space-between;
   -ms-justify-content: space-between;
@@ -452,9 +460,6 @@ ul {
 
   .arrow-right {
     -webkit-animation: arrow 1.1s infinite;
-    -moz-animation: arrow 1.1s infinite;
-    -ms-animation: arrow 1.1s infinite;
-    -o-animation: arrow 1.1s infinite;
     animation: arrow 1.1s infinite;
   }
 }
@@ -476,23 +481,23 @@ ul {
 
 .footer:hover .arrow-right {
   -webkit-animation: arrow 1.1s infinite;
-  -moz-animation: arrow 1.1s infinite;
-  -ms-animation: arrow 1.1s infinite;
-  -o-animation: arrow 1.1s infinite;
   animation: arrow 1.1s infinite;
 }
 
 @-keyframes arrow {
   0% {
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
   }
 
   50% {
-    transform: translate3d(-10px, 0, 0);
+    -webkit-transform: translate3d(-10px, 0, 0);
+            transform: translate3d(-10px, 0, 0);
   }
 
   100% {
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
   }
 }
 
@@ -510,48 +515,6 @@ ul {
   }
 }
 
-@-moz-keyframes arrow {
-  0% {
-    -moz-transform: translate3d(0, 0, 0);
-  }
-
-  50% {
-    -moz-transform: translate3d(-10px, 0, 0);
-  }
-
-  100% {
-    -moz-transform: translate3d(0, 0, 0);
-  }
-}
-
-@-ms-keyframes arrow {
-  0% {
-    -ms-transform: translate3d(0, 0, 0);
-  }
-
-  50% {
-    -ms-transform: translate3d(-10px, 0, 0);
-  }
-
-  100% {
-    -ms-transform: translate3d(0, 0, 0);
-  }
-}
-
-@-o-keyframes arrow {
-  0% {
-    -ms-transform: translate3d(0, 0, 0);
-  }
-
-  50% {
-    -ms-transform: translate3d(-10px, 0, 0);
-  }
-
-  100% {
-    -ms-transform: translate3d(0, 0, 0);
-  }
-}
-
 /* code for animated blinking cursor */
 .typed-cursor {
   opacity: 1;
@@ -559,9 +522,6 @@ ul {
   color: white;
   font-size: 4.4vw;
   -webkit-animation: blink 1.1s infinite;
-  -moz-animation: blink 1.1s infinite;
-  -ms-animation: blink 1.1s infinite;
-  -o-animation: blink 1.1s infinite;
   animation: blink 1.1s infinite;
 }
 
@@ -580,48 +540,6 @@ ul {
 }
 
 @-webkit-keyframes blink {
-  0% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-@-moz-keyframes blink {
-  0% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-@-ms-keyframes blink {
-  0% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-@-o-keyframes blink {
   0% {
     opacity: 1;
   }
