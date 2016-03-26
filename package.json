@@ -1,0 +1,20 @@
+{
+  "name": "kogg.github.io",
+  "version": "1.0.0",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kogg/kogg.github.io.git"
+  },
+  "author": {
+    "name": "kogg",
+    "email": "team@instantlogosearch.com",
+    "url": "http://ko.gg"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kogg/kogg.github.io/issues"
+  },
+  "homepage": "https://github.com/kogg/kogg.github.io#readme"
+}
