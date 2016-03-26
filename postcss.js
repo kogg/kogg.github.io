@@ -10,10 +10,11 @@ module.exports = {
 		'cssnano',
 		'postcss-reporter'
 	],
-	'cssnano':          { autoprefixer: false },
-	'postcss-import':   { glob: true },
-	'postcss-reporter': { clearMessages: true },
-	'postcss-url':      {
+	'cssnano':             { autoprefixer: false },
+	'postcss-cachebuster': { imagesPath: '/www' },
+	'postcss-import':      { glob: true },
+	'postcss-reporter':    { clearMessages: true },
+	'postcss-url':         {
 		url:      'inline',
 		fallback: 'copy'
 	}
