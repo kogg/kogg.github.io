@@ -1,28 +1,10 @@
 @font-face {
-  font-family: "AtlasTypewriterRegular";
-  font-weight: 400;
-  font-style: normal;
-  font-stretch: normal;
-  src: url("/fonts/AtlasTypewriter-Regular-Web.eot");
-  src: url("/fonts/AtlasTypewriter-Regular-Web.eot?#iefix") format("embedded-opentype"), url("/fonts/AtlasTypewriter-Regular-Web.woff") format("woff"), url("/fonts/AtlasTypewriter-Regular-Web.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "AtlasTypewriterMedium";
-  font-weight: 500;
-  font-style: normal;
-  font-stretch: normal;
-  src: url("/fonts/AtlasTypewriter-Medium-Web.eot");
-  src: url("/fonts/AtlasTypewriter-Medium-Web.eot?#iefix") format("embedded-opentype"), url("/fonts/AtlasTypewriter-Medium-Web.woff") format("woff"), url("/fonts/AtlasTypewriter-Medium-Web.ttf") format("truetype");
-}
-
-@font-face {
   font-family: "AtlasGroteskBold";
   font-weight: 700;
   font-style: normal;
   font-stretch: normal;
   src: url("/fonts/AtlasGrotesk-Bold-Web.eot");
-  src: url("/fonts/AtlasGrotesk-Bold-Web.eot?#iefix") format("embedded-opentype"), url("/fonts/AtlasGrotesk-Bold-Web.woff") format("woff"), url("/fonts/AtlasGrotesk-Bold-Web.ttf") format("truetype");
+  src: url("/fonts/AtlasGrotesk-Bold-Web.eot?#iefix") format("embedded-opentype"), url("/fonts/AtlasGrotesk-Bold-Web.woff") format("woff");
 }
 
 @font-face {
@@ -30,8 +12,7 @@
   font-weight: 400;
   font-style: normal;
   font-stretch: normal;
-  src: url("/fonts/AtlasGrotesk-Regular-Web.eot");
-  src: url("/fonts/AtlasGrotesk-Regular-Web.eot?#iefix") format("embedded-opentype"), url("/fonts/AtlasGrotesk-Regular-Web.woff") format("woff"), url("/fonts/AtlasGrotesk-Regular-Web.ttf") format("truetype");
+  src: url("/fonts/AtlasGrotesk-Regular-Web.woff") format("woff"), url("/fonts/AtlasGrotesk-Regular-Web.ttf") format("truetype");
 }
 
 *,
@@ -136,8 +117,9 @@ h2 {
 
 h1 {
   text-align: center;
-  font-size: 4.4vw;
+  font-size: 4vw;
   font-weight: 900;
+  font-family: AtlasGroteskBold;
   color: white;
   position: relative;
   display: inline;
@@ -184,6 +166,7 @@ h1 {
   text-decoration: none;
   pointer-events: none;
   font-weight: 900;
+  font-family: AtlasGroteskBold;
 }
 
 .contact-us-title-two {
@@ -195,7 +178,7 @@ h1 {
 }
 
 /*.teal-color {
-	color: #00acc1;
+  color: #00acc1;
 }*/
 .work-item-link-container {
   margin-top: 8px;
