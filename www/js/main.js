@@ -1,3 +1,4 @@
+require('../css/main.css');
 var $ = require('jquery');
 window.jQuery = $; // TODO I can't get browserify-shim to deal with this for me
 require('typed.js');
@@ -9,8 +10,8 @@ $("#typed").typed({
 	loop:           true,
 	contentType:    'html',
 	loopCount:      false,
-	callback:       function foo(){ console.log("Callback"); },
-	resetCallback:  function newTyped(){ /* A new typed object */ }
+	callback:       function (){ },
+	resetCallback:  function (){ }
 });
 
 $(".reset").click(function(){
