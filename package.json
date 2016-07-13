@@ -17,7 +17,7 @@
   },
   "scripts": {
     "cssfmt": "cssfmt www/css/main.css && git add www/css/main.css",
-    "deploy": "gh-pages -d dist",
+    "deploy": "gh-pages -d dist -b master",
     "pkg": "webpack -p",
     "start": "foreman start"
   },
