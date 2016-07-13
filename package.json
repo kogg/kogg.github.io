@@ -1,52 +1,38 @@
 {
   "name": "kogg.github.io",
   "version": "1.0.0",
-  "scripts": {
-    "deploy": "git subtree push --prefix=dist origin master",
-    "start": "foreman start",
-    "browserify": "mkdir -p dist/js && browserify www/js/main.js --debug --verbose | exorcist dist/js/main.compiled.js.map > dist/js/main.compiled.js",
-    "clean": "rm -rf dist/*",
-    "copy": "cp -r www/* dist/",
-    "cssfmt": "cssfmt www/css/main.css && git add www/css/main.css",
-    "git:add": "git add dist",
-    "postcss": "mkdir -p dist/css && postcss -c postcss.js -o dist/css/main.css www/css/main.css",
-    "postcss:watch": "mkdir -p temp/css && postcss -c postcss.js -o temp/css/main.css www/css/main.css -w",
-    "sorcery": "sorcery -i dist/js/main.minified.js -o dist/js/main.js && rm dist/js/main.*.js*",
-    "uglify": "uglifyjs dist/js/main.compiled.js -o dist/js/main.minified.js --in-source-map dist/js/main.compiled.js.map --source-map dist/js/main.minified.js.map --source-map-root ../.. -p relative -c drop_console,warnings=false --stats",
-    "watchify": "mkdir -p temp/js && watchify www/js/main.js -o temp/js/main.js --debug --verbose"
+  "homepage": "https://github.com/kogg/kogg.github.io#readme",
+  "bugs": {
+    "url": "https://github.com/kogg/kogg.github.io/issues"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kogg/kogg.github.io.git"
-  },
+  "license": "ISC",
   "author": {
     "name": "kogg",
     "email": "team@instantlogosearch.com",
     "url": "http://ko.gg"
   },
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/kogg/kogg.github.io/issues"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kogg/kogg.github.io.git"
   },
-  "homepage": "https://github.com/kogg/kogg.github.io#readme",
-  "pre-commit": [
-    "cssfmt",
-    "clean",
-    "copy",
-    "postcss",
-    "browserify",
-    "uglify",
-    "sorcery",
-    "git:add"
-  ],
+  "scripts": {
+    "browserify": "mkdir -p dist/js && browserify www/js/main.js --debug --verbose | exorcist dist/js/main.compiled.js.map > dist/js/main.compiled.js",
+    "clean": "rm -rf dist/*",
+    "copy": "cp -r www/* dist/",
+    "postcss": "mkdir -p dist/css && postcss -c postcss.js -o dist/css/main.css www/css/main.css",
+    "postcss:watch": "mkdir -p temp/css && postcss -c postcss.js -o temp/css/main.css www/css/main.css -w",
+    "cssfmt": "cssfmt www/css/main.css && git add www/css/main.css",
+    "deploy": "git subtree push --prefix=dist origin master",
+    "git:add": "git add dist",
+    "sorcery": "sorcery -i dist/js/main.minified.js -o dist/js/main.js && rm dist/js/main.*.js*",
+    "start": "foreman start",
+    "uglify": "uglifyjs dist/js/main.compiled.js -o dist/js/main.minified.js --in-source-map dist/js/main.compiled.js.map --source-map dist/js/main.minified.js.map --source-map-root ../.. -p relative -c drop_console,warnings=false --stats",
+    "watchify": "mkdir -p temp/js && watchify www/js/main.js -o temp/js/main.js --debug --verbose"
+  },
   "browserify": {
     "transform": [
       "uglifyify"
     ]
-  },
-  "devDependencies": {
-    "cssfmt": "^2.1.5",
-    "pre-commit": "^1.1.2"
   },
   "dependencies": {
     "autoprefixer": "^6.2.2",
@@ -68,5 +54,19 @@
     "uglify-js": "^2.6.2",
     "uglifyify": "^3.0.1",
     "watchify": "^3.7.0"
-  }
+  },
+  "devDependencies": {
+    "cssfmt": "^2.1.5",
+    "pre-commit": "^1.1.2"
+  },
+  "pre-commit": [
+    "cssfmt",
+    "clean",
+    "copy",
+    "postcss",
+    "browserify",
+    "uglify",
+    "sorcery",
+    "git:add"
+  ]
 }
